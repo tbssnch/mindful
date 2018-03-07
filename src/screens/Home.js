@@ -1,14 +1,30 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
+import { IconButton } from '../components/icon-button';
 
 function Home() {
   return (
     <View style={styles.container}>
-      <Image source={require("./../assets/img/data.png")} style={{width: 80, height: 80}} />
+    <IconButton
+      text={require('./../assets/img/Data.png')}
+      onPress={() => {
+        alert("Button Works!");
+      }}
+     />
       <Text style={styles.text}>DATA</Text>
-      <Image source={require("./../assets/img/entries.png")} style={{width: 80, height: 80}} />
+      <IconButton
+        text={require('./../assets/img/Entries.png')}
+        onPress={() => {
+          alert("Button Works!");
+        }}
+       />
       <Text style={styles.text}>ENTRIES</Text>
-      <Image source={require("./../assets/img/new-entry.png")} style={{width: 80, height: 80}} />
+      <IconButton
+        text={require('./../assets/img/NewEntry.png')}
+        onPress={() => {
+          alert("Button Works!");
+        }}
+       />
       <Text style={styles.text}>NEW ENTRY</Text>
     </View>
   );
